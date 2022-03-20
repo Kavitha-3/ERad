@@ -20,7 +20,7 @@ const employeeSchema=new mongoose.Schema({
              country:{type:String},
              pincode:{type:Number}
     },
-});
+}); 
 
 //employeeSchema.plugin(autoIncrement);
 employeeSchema.plugin(autoIncrement.plugin,{model:'employee',field:'emp_id',startAt:'1',incrementBy:1});
