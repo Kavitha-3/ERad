@@ -1,5 +1,4 @@
 const {connect} = require('mongoose');
-const autoIncrement=require("mongoose-auto-increment");
 /**
  * this config is to connect with database
  * @returns {Promise<any>} Returns Mongoose connection as promise

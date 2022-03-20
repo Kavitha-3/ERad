@@ -1,9 +1,9 @@
 const mongoose=require("mongoose");
-// var aplhanumeric=require("alphanumeric-id");
-const autoIncrement=require("mongoose-auto-increment");
-// const { default: alphanumeric } = require("alphanumeric-id");
 
-var connection = mongoose.createConnection("mongodb://localhost/employee");
+const autoIncrement=require("mongoose-auto-increment");
+
+
+var connection = mongoose.createConnection("mongodb://localhost/employees");
 autoIncrement.initialize(connection);
 
 
@@ -23,8 +23,8 @@ const employeeSchema=new mongoose.Schema({
 });
 
 //employeeSchema.plugin(autoIncrement);
-employeeSchema.plugin(autoIncrement.plugin,{model:'employee',field:'emp_id',value:'ERAD00',startAt:'0',incrementBy:1});
+employeeSchema.plugin(autoIncrement.plugin,{model:'employee',field:'emp_id',startAt:'1',incrementBy:1});
 
 const employee=mongoose.model('employee',employeeSchema,'employee');
-const map1=
+
 module.exports={employee};
